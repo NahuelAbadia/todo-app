@@ -166,6 +166,7 @@ h1 {
 @media only screen and (max-width : 556px) {
   .todo-app {
     width: 340px;
+    margin: 60px auto;
   }
 
   .todo-input {

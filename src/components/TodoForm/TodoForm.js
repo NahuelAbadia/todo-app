@@ -41,6 +41,7 @@ const TodoForm = (props) => {
         className='todo-input'
         onChange={handleChange}
         ref={todoRef}
+        autoComplete="off"
       />
       <button className="todo-button">Add todo</button>
     </form>

@@ -23,7 +23,7 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
   }
 
   const getDate = (newDate) => {
-    const date = newDate.split("T", 3)[0].split('"')[1].split('-').reverse().join('-')
+    const date = newDate.split("T", 3)[0].split('"')[1].split('-').reverse().splice(0, 2).join('/')
     return date;
   }
 

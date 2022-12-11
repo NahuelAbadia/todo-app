@@ -204,9 +204,9 @@ h1 {
 
 .letter-container {
   background-color: #2b3253;
-  position: fixed;
+  /* position: absolute;
   top: 160px;
-  right: 757px;
+  right: 757px; */
   border-radius: 5px;
   padding: 5px 8px;
   cursor: pointer;

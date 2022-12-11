@@ -11,7 +11,7 @@ const TodoForm = (props) => {
   });
 
   useEffect(() => {
-    if(localStorage.getItem('todo-edit')){
+    if (localStorage.getItem('todo-edit')) {
       setPlaceholder(true);
       localStorage.removeItem('todo-edit');
     }
@@ -26,7 +26,8 @@ const TodoForm = (props) => {
 
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
-      text: todo
+      text: todo,
+      date: JSON.stringify(new Date()),
     })
 
     setTodo('')

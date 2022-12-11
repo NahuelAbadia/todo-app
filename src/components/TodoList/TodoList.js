@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Todo from '../Todo/Todo';
 import TodoForm from '../TodoForm/TodoForm';
+import { RxLetterCaseCapitalize } from "react-icons/rx";
 
 const TodoList = () => {
 
@@ -53,7 +54,12 @@ const TodoList = () => {
 
   return (
     <div>
-      <h1>¿Que vas a hacer hoy?📝</h1>
+      <div style={{ display: 'flex', direction: 'row', alignItems: 'center', justifyContent: 'center' }}>
+        <h1>¿Que vas a hacer hoy?📝</h1>
+        <div className='letter-container' onClick={() => { document.dispatchEvent(new CustomEvent('CHANGE_LETTER_TYPE', {})) }}>
+          <RxLetterCaseCapitalize className='letter-button' />
+        </div>
+      </div>
       <TodoForm onSubmit={addTodo} />
       <div className="todo-container">
         <Todo

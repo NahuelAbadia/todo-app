@@ -22,6 +22,11 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
     return <TodoForm edit={edit} onSubmit={submitUpdate} />
   }
 
+  const getDate = (newDate) => {
+    const date = newDate.split("T", 3)[0].split('"')[1].split('-').reverse().join('-')
+    return date;
+  }
+
   return todos.map((todo, index) => (
     <div
       className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
@@ -35,8 +40,9 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
         {todo.text}
       </div>
       <div className='icons'>
+        <span className="date">{getDate(todo?.date)}</span>
         <RiCloseCircleLine
-          className='detele-icon'
+          className='delete-icon'
           onClick={() => removeTodo(todo.id)}
         />
         <TiEdit
@@ -45,16 +51,7 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
         />
       </div>
     </div>
-  )).sort((a, b) => {
-    if (a.key > b.key) {
-      return -1;
-    }
-    if (a.key < b.key) {
-      return 1;
-    }
-    // a must be equal to b
-    return 0;
-  })
+  ))
 }
 
 export default Todo

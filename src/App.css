@@ -2,6 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.font-family-calibri {
+  font-family: 'Calibri';
+}
+
+.font-family-default {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 }
@@ -105,16 +112,22 @@ h1 {
   display: flex;
   align-items: center;
   font-size: 24px;
-  cursor: pointer;
+}
+
+.date {
+  font-size: 16px;
+  padding-right: 5px;
 }
 
 .delete-icon {
   margin-right: 5px;
   color: #fff;
+  cursor: pointer;
 }
 
 .edit-icon {
   color: #fff;
+  cursor: pointer;
 }
 
 /* width */
@@ -187,4 +200,19 @@ h1 {
   .todo-input {
     width: 190px;
   }
+}
+
+.letter-container {
+  background-color: #2b3253;
+  position: fixed;
+  top: 160px;
+  right: 757px;
+  border-radius: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+.letter-button {
+  font-size: 24px;
+  color: white;
 }

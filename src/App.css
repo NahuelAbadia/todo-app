@@ -2,16 +2,18 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
-.font-family-calibri {
+/* .font-family-calibri {
   font-family: 'Calibri';
 }
 
 .font-family-default {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
-}
+} */
 
 body {
   background: linear-gradient(90deg, rgb(6, 76, 92) 0%, rgb(88, 100, 208) 100%);

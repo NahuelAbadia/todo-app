@@ -54,12 +54,12 @@ const TodoList = () => {
 
   return (
     <div>
-      <div style={{ display: 'flex', direction: 'row', alignItems: 'center', justifyContent: 'space-evenly' }}>
-        <h1>¿Que vas a hacer hoy?📝</h1>
-        <div className='letter-container' onClick={() => { document.dispatchEvent(new CustomEvent('CHANGE_LETTER_TYPE', {})) }}>
+      {/* <div style={{ display: 'flex', direction: 'row', alignItems: 'center', justifyContent: 'space-evenly' }}> */}
+      <h1>¿Que vas a hacer hoy?📝</h1>
+      {/* <div className='letter-container' onClick={() => { document.dispatchEvent(new CustomEvent('CHANGE_LETTER_TYPE', {})) }}>
           <RxLetterCaseCapitalize className='letter-button' />
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
       <TodoForm onSubmit={addTodo} />
       <div className="todo-container">
         <Todo
